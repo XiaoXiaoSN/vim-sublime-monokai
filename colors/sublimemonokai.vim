@@ -128,6 +128,15 @@ call s:h('SublimePurple',      { 'fg': s:purple       })
 call s:h('SublimeRed',         { 'fg': s:red          })
 call s:h('SublimeDarkRed',     { 'fg': s:darkred      })
 
+call s:h('SublimePinkWithLightBlack',        { 'fg': s:pink,    'bg': s:lightblack })
+call s:h('SublimeGreenWithLightBlack',       { 'fg': s:green,   'bg': s:lightblack })
+call s:h('SublimeAquaWithLightBlack',        { 'fg': s:aqua,    'bg': s:lightblack })
+call s:h('SublimeYellowWithLightBlack',      { 'fg': s:yellow,  'bg': s:lightblack })
+call s:h('SublimeOrangeWithLightBlack',      { 'fg': s:orange,  'bg': s:lightblack })
+call s:h('SublimePurpleWithLightBlack',      { 'fg': s:purple,  'bg': s:lightblack })
+call s:h('SublimeRedWithLightBlack',         { 'fg': s:red,     'bg': s:lightblack })
+call s:h('SublimeDarkRedWithLightBlack',     { 'fg': s:darkred, 'bg': s:lightblack })
+
 " Default highlight groups (see ':help highlight-default' or http://vimdoc.sourceforge.net/htmldoc/syntax.html#highlight-groups)
 
 call s:h('ColorColumn',  {                      'bg': s:lightblack2                            })
@@ -156,7 +165,7 @@ call s:h('PmenuSel',     { 'fg': s:aqua,        'bg': s:black,    'format': 'rev
 call s:h('PmenuThumb',   { 'fg': s:lightblack,  'bg': s:grey                                   })
 hi! link Question SublimeYellow
 call s:h('Search',       {                                        'format': 'reverse,underline'})
-call s:h('SignColumn',   { 'fg': s:lightblack,  'bg': s:grey                                   })
+hi! link SignColumn LineNr
 hi! link SpecialKey SublimeLightBlack2
 call s:h('SpellBad',     {                      'bg': s:darkred                                })
 call s:h('SpellCap',     {                      'bg': s:darkyellow                             })
@@ -609,10 +618,10 @@ hi! link gitrebaseSummary String
 
 " vim-gitgutter
 
-hi! link GitGutterAdd          SublimeGreen
-hi! link GitGutterChange       SublimeYellow
-hi! link GitGutterDelete       SublimePink
-hi! link GitGutterChangeDelete SublimeOrange
+hi! link GitGutterAdd          SublimeGreenWithLightBlack
+hi! link GitGutterChange       SublimeYellowWithSublimeGreenWithLightBlack
+hi! link GitGutterDelete       SublimePinkWithSublimeGreenWithLightBlack
+hi! link GitGutterChangeDelete SublimeOrangeWithSublimeGreenWithLightBlack
 
 " GraphViz
 " Variation: I actually like to keep these as Keyword, but Sublime does this
